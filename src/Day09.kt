@@ -46,14 +46,6 @@ fun main() {
 //    println(part2(input))
 }
 
-data class Point(var x: Int, var y: Int)
-//    companion object {
-//        fun follows(direction: Direction): Point {
-//            return follow(super., direction)
-//        }
-//    }
-//}
-
 fun goInDirection(from: Point, direction: Direction, steps: Int): List<Point> {
     //TODO solve resursively
     var f = from

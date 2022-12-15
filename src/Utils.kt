@@ -1,6 +1,7 @@
 import java.io.File
 import java.math.BigInteger
 import java.security.MessageDigest
+import kotlin.math.absoluteValue
 
 /**
  * Reads lines from the given input txt file.
@@ -49,4 +50,10 @@ fun inputTo2DArray(input: String, f: (Char) -> Int): Array<Array<Int>> {
     return input.split("\n").map {
         it.map { e -> f(e) }.toTypedArray()
     }.toTypedArray()
+}
+
+data class Point(val x: Int, val y: Int) {
+    fun manhattanDinstanceTo(otherPoint: Point): Int {
+        return (this.x - otherPoint.x).absoluteValue + (this.y - otherPoint.y).absoluteValue
+    }
 }
